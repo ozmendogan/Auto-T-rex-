@@ -5,17 +5,17 @@ import keyboard
 from PIL import Image
 import time
 from mss import mss
-mon = {"top":538 , "left":426,"width":250 , "height":100}
+mon = {"top":426 , "left":500,"width":250 , "height":100}
 sct = mss()
 i = 0
 
 def record_screen(record_id,key):
     global i
     i +=1
-    print("{}: {}:".format(key,i))
-    img =sct.grab(mon) #ekran kaydını buna göre alır
+    print("{}: {}".format(key,i))
+    img =sct.grab(mon)
     im = Image.frombytes("RGB",img.size,img.rgb)
-    im.save("./img/{}_{}_{}.png",format(key,record_id),i)
+    im.save("./img/{}_{}_{}.png".format(key,record_id,i))
 
 is_exit = False
 def exit():
