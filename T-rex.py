@@ -5,7 +5,7 @@ import keyboard
 from PIL import Image
 import time
 from mss import mss
-mon = {"top":426 , "left":500,"width":250 , "height":100}
+mon = {"top":426 , "left":485,"width":250 , "height":100}
 sct = mss()
 i = 0
 
